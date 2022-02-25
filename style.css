@@ -1,16 +1,213 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
-* {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat+Subrayada&family=Teko:wght@300&display=swap');
+body {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background: #9ACDE0;
+  font-family: "Montserrat", sans-serif;
   box-sizing: border-box;
 }
 
-body {
+html, body {
+  height: 100vh;
+}
+
+
+.parallaxbg {
+  background-image: url('https://www.gonect.nl/wp-content/uploads/2017/12/happy.gif');
+  height: 100%; 
+  
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+
+  transition-property: filter;
+  transition-duration: 0.5s;
+}
+
+
+.headertext {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #FFE8A3;
-  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  
+  color: #ffffff;
+  font-style: bold;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+  
+  transition: 0.6s;
+  }
+
+
+
+.headertext p {
+font-size: 30pt;
+line-height: 20pt;
+font-family: 'Teko';
+text-shadow: 0px 0px 20px rgba(0,0,0,0.46);
 }
 
-html, body {
+.headertextname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: #ffffff;
+  font-style: bold;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  
+  
+  
+  transition: 0.6s;
+  }
+  .headertextname h1 {
+    font-size: 75pt;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.9s;
+
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.16);
+    }
+
+
+/* ABOUT ME SECTION */
+.aboutme {
+  background-color: rgb(255, 255, 255);
+  border-top-right-radius: 5vh;
+padding-top: 4vh;
   height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;  
+  transition: 0.5s;
+  direction: rtl;
 }
+.amContent {
+
+  direction: ltr;
+}
+
+/* ABOUT ME CUSTOM SCROLLBAR STYLE */
+.aboutme::-webkit-scrollbar{
+  background-color: rgb(255, 255, 255);
+  width: 1vh;
+display: hide;
+}
+
+.aboutme::-webkit-scrollbar-track {
+  background: #ffffff; 
+  
+}
+ 
+.aboutme::-webkit-scrollbar-thumb {
+  background: rgb(209, 209, 209); 
+}
+.aboutme::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 83, 83); 
+}
+
+/* ABOUT ME Text box */
+.amtext p {
+  display: block;
+  position:sticky;
+  height: 100%;
+  overflow:hidden;
+ 
+  transition-property: margin-left;
+  transition-duration: 1s;
+}
+
+.aboutme p {
+  padding-left: 2vh;
+  padding-bottom:110%;
+  padding-right: 2vh;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+width: 50vh;
+margin-left: -50vh;
+
+  height: 10vh;
+  line-height: 5vh;
+  font-size: 3vh;
+  text-align: left;
+  white-space:initial;
+}
+.aboutme h1 {
+  padding-left: 2vh;
+  font-weight: bold;
+  text-align:left;
+  word-spacing:1%;
+margin-bottom: 20%;
+  height: 1vh;
+  line-height: 10vh;
+  font-size: 8vh;
+  text-align: left;
+  white-space: nowrap;
+  margin-left: -50vh;
+
+  transition-property: margin-left;
+  transition-duration: 1s;
+}
+
+.projects-container{
+  background-color: transparent;
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  border-radius: 2vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100%;
+  margin: 20px;
+  margin-top: 500px;
+}
+.divider{
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+
+/*
+@media screen and (max-height: 450px) and (max-width: 900px) {
+  .aboutme {padding-top: 15px;}
+  .aboutme p {font-size: 1vh;}
+  body {background-color: black;}
+}
+*/
+
+#main {
+  transition: margin-left .5s;
+}
+
+
+
+
+
