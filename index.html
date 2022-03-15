@@ -2,68 +2,205 @@
 <html style=" height: 100%; margin: 0;">
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
   </head>
 <body>
-  <div class="parallaxbg" id="parallaxbg"></div>
-  <section class="header" id="main">
+
+  <video id="parallaxbg" src="images/Background-video.mp4" autoplay loop playsinline muted></video>
+  <section class="header" >
 
       
     <div class="headertextname text-nowrap font-weight-bold text-uppercase row" id="headertextH1">
-        <h1 id="font-H1">Floris Guldenaar</h1>
+        <h1 id="font-H1">Software Developer</h1>
       </div>
       <div class="headertext text-nowrap font-weight-bold text-uppercase row" id="headertext">
       <div id="headertextP">
         <p>Level Design</p>
         <p>Web Development</p>
         <p>Nog wat</p>
+        
       </div>
     </div>
+  </section>
 
+    <div class="block-about-container" id="main">
+        <section>
+          <div class="container col px-4 py-5" style="text-align: unset; z-index: 1;">
+            
+            <div class="row flex-lg-row-reverse align-items-center">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="images/temp.png" class="d-block mx-lg-auto img-fluid" width="300" height="300" loading="lazy">
+                
+              </div>
+              
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3">About me</h1>
+                <p class="lead">Loremem, dolore Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi labore in laudantium reprehenderit earum at rem delectus, quaerat, neque numquam porro aperiam doloremque culpa nam aliquid quidem dolorum tempora facilis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione, hic quasi eum repudiandae eveniet dolores harum quia illo earum dolore rem. Ipsa consequuntur perferendis, tempore iste ducimus blanditiis aut ullam. lo accusamus nemo voluptates! Incidunt ipsum assumenda illo voluptas.</p>
+              <div class="bg-block" style="z-index: -1;"></div></div>
+              
+            </div>
+          </div>
+        </section>
+      </div>
+
+
+      <div class="block-container">
+
+
+        <section class="block">
+
+          <button onclick="openInfo()" class="container col px-4 py-5" style="text-align: unset;">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="images/temp.png" class="d-block mx-lg-auto img-fluid" width="300" height="300" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Project 1</h1>
+                <p class="lead text-white">Loremem, dolore accusamus nemo voluptates! Incidunt ipsum assumenda illo voluptas.</p>
+                <h2>2020 - 2020</h2>
+              </div>
+            </div>
+          </button>
+        </section>
+        <div class="projects-divider-mini"></div>
+        <section class="block">
+
+          <button onclick="openInfo()" class="container col px-4 py-5" style="text-align: unset;">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+              <div class="col-10 col-sm-8 col-lg-6">
+                <img src="images/temp.png" class="d-block mx-lg-auto img-fluid" width="300" height="300" loading="lazy">
+              </div>
+              <div class="col-lg-6">
+                <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Project 2</h1>
+                <p class="lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ad incidunt quam autem asperiores sapiente, ex delectus quasi esse ipsum, quidem, dolore accusamus nemo voluptates! Incidunt ipsum assumenda illo voluptas.</p>
+                <h2>2014 - 2016</h2>
+              </div>
+            </div>
+          </button>
+
+          
+        </section>
+        
+
+
+
+        <div id="pjctInfo" class="project-overlay">
+          <div class="exitbutton">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeInfo()">&times;</a>
+        </div>
+              <div class="project-info row">
+                <div class="container row flex-lg-row-reverse ">
+                  <div class="col-10 col-sm-8 col-lg-6 ">
+                    <div class="d-flex" style="height: 100%;">
+                      <div class="vr"></div>
+
+                  </div>
+
+                  <div class="img-overlay" onclick="closeImgOverlay()" id="imgOverlay">
+                    <img src="images/temp.png" alt="Image Fullscreen" id="imgOverlayImage" >
+                    <div class="img-full-overlay-text">
+                      <h1 id="imgOverlayTitle">TITLE</h1>
+                      <p id="imgOverlayText">TEXT</p>
+                    </div>
+                  </div>
+
+
+                   <div class="image">
+                    <section class="imageCollage">
+                      <div class="image-info">
+                        <img class="colImage" titleText="TITLE 1" text="Lorem Lorem loading" src="images/temp.png" alt="Picture 1"  title="Fullscreen"onclick="openImgOverlay(), selectImage(this), selectText(this)">
+                        <p>Click for Fullscreen</p>
+                      </div>
+                      <div class="image-info">
+                        <img class="colImage" titleText="TITethethLE 2" text="Loremwrywrywryhetehhethethethethewrywrywryoading" src="images/temp2.png" alt="Picture 1"  title="Fullscreen"onclick="openImgOverlay(), selectImage(this), selectText(this)">
+                        <p>Click for Fullscreen</p>
+                      </div>
+                      <div class="image-info">
+                        <img class="colImage" titleText="TITLeheththththththththE 2" text="Loremwrywrywrywrywrywryoading" src="images/temp2.png" alt="Picture 1"  title="Fullscreen"onclick="openImgOverlay(), selectImage(this), selectText(this)">
+                        <p>Click for Fullscreen</p>
+                      </div>
+                      <div class="image-info">
+                        <img class="colImage" titleText="TITLE 2" text="Loremwrywrywrywrywrywryoading" src="images/temp2.png" alt="Picture 1"  title="Fullscreen"onclick="openImgOverlay(), selectImage(this), selectText(this)">
+                        <p>Click for Fullscreen</p>
+                      </div>
+
+
+
+
+                                           
+
+                      </div>     
+                                      
+                    </section>
+                                        </div>
+
+                  <div class="col-lg-6">
+                    
+                    <h1 class="display-5 fw-bold lh-1 mb-3 text-white">Project 1</h1>
+                    <p class="lead text-white"> Hallo i kben etotl Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima nostrum nemo molestiae voluptas culpa voluptate aperiam at sint aliquam temporibus amet maiores sed expedita voluptates odit dolorum ut, veniam et! grigjrigjrigjrigjgirjgrigijrgir uptas.</p>
+                    <div class="img-text">
+                      <h1>neque. psa.</h1>
+                      <p>neque. psa.</p>
+                    </div>
+                    <div class="bottom">
+                      <h1>YEAR:</h1>
+                    <p>0000 - 0000</p>
+                    <h3> &nbsp;|&nbsp; </h3>
+                    <h1>ROLE:</h1>
+                    <p> Level Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="projects-divider"></div>
+
+        
+      </section>
+     
+     
       
-    </section>
+
+    </div>
+
+    
   
 
   <div id="aboutmeOverlay" class="aboutme">
 
     <div class="amContent">
-      <h1 id="slideContent1">About me.</h1> 
+      <h1 id="slideContent1">Contact.</h1> 
+      <hr style="width: 21vw; margin-left: 4vh;"/>
       <div class="amtext">
         <p id="slideContent2">Hello there! <br> My name is Floris Guldenaar. Since i was 12 i was interested Level Design in games. I was always experimenting with the source engine. i always created little levels, Later i moved on to Unreal Engine 4. I'm also interested in Web Development, but im still learning</p>
         <p id="slideContent3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo praesentium adipisci incidunt voluptas reiciendis laboriosam, perspiciatis delectus est suscipit, repellendus illum magnam aut excepturi nostrum cum nam. Corrupti, itaque magni.</p>
       </div>
     </div>
   </div>
-<!---
-    <script>
-      function openAboutme() {
-        document.getElementById("aboutmeOverlay").style.width = "25vw";
-        document.getElementById("main").style.marginLeft = "25vw";
 
-        setTimeout(function(){
-          document.getElementById("slideContent1").style.marginLeft = "1vw";}, 100);
-          setTimeout(function(){
-          document.getElementById("slideContent2").style.marginLeft = "1vw";}, 300);
-          setTimeout(function(){
-          document.getElementById("slideContent3").style.marginLeft = "1vw";}, 500);
-      }
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">Place sticky footer content here.</span>
+    </div>
+  </footer>
 
 
-
-      function closeAboutme() {
-        document.getElementById("aboutmeOverlay").style.width = "0";
-        document.getElementById("main").style.marginLeft= "0";
-      }
-
-      </script>
---->
       <script>
+        
 
         //Scroll open About Me
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {scrollFunctions()};
 
-function myFunction() {
-  if (document.documentElement.scrollTop > 10 && document.documentElement.scrollTop < 500) {
+function scrollFunctions() {
+  if (document.documentElement.scrollTop > 7000 && document.documentElement.scrollTop < 800) {
+    //document.getElementById("aboutmeOverlay").style.borderRight = "10px solid rgb(54, 17, 17)";
+
     document.getElementById("aboutmeOverlay").style.width = "25vw";
     document.getElementById("main").style.marginLeft = "25vw";
 
@@ -80,6 +217,8 @@ function myFunction() {
 
   }else{
     clearTimeout(slideTimer);
+    document.getElementById("aboutmeOverlay").style.borderRight = "0";
+
     document.getElementById("aboutmeOverlay").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
  
@@ -95,15 +234,17 @@ function myFunction() {
   }
 
   if (document.documentElement.scrollTop > 10) {
+    
     document.getElementById("parallaxbg").style.filter = "blur(3vh)";
+    document.getElementById("parallaxbg").style.opacity = "20%";
 
     document.getElementById("font-H1").style.fontSize = "40pt";
     //document.getElementById("font-H1").style.textShadow = "0 0 5px #FFF, 0px 0px 20px rgba(4,44,255,0.34)";
-    document.getElementById("headertext").style.transform = "translate(-0vh, 100vw)";
+    document.getElementById("headertext").style.transform = "translate(-10vh, 100vw)";
 
     document.getElementById("headertextH1").style.Top = "0";
     document.getElementById("headertextH1").style.Left = "25%";
-    document.getElementById("headertextH1").style.transform = "translate(-50vh, -23vw)";
+
 
 
 
@@ -111,7 +252,10 @@ function myFunction() {
     
 
   }else{
+    
+
     document.getElementById("parallaxbg").style.filter = "blur(0vh)";
+    document.getElementById("parallaxbg").style.opacity = "100%";
 
     document.getElementById("headertext").style.transform = "translate(-50%, -50%)";
     document.getElementById("headertext").style.fontSize = "50px";
@@ -124,8 +268,38 @@ function myFunction() {
   
 }
 
+function openInfo() {
+  document.getElementById("pjctInfo").style.height = "100%";
+}
 
+function closeInfo() {
+  document.getElementById("pjctInfo").style.height = "0%";
+}
 
+function openImgOverlay() {
+  document.getElementById("imgOverlay").style.display = "block";
+  setTimeout(function(){document.getElementById("imgOverlay").style.opacity = "100%";}, 1);
+}
+
+function closeImgOverlay() {
+  document.getElementById("imgOverlay").style.opacity = "0%";
+  setTimeout(function(){document.getElementById("imgOverlay").style.display = "none";}, 300);
+
+}
+
+function selectImage(si) {
+    var imgSrc = si.src;
+    document.getElementById("imgOverlayImage").src = imgSrc;
+}
+function selectText(text) {
+  var titleText = text.getAttribute('Titletext');
+  var text = text.getAttribute('text');
+  console.log(titleText)
+  console.log(text)
+
+  document.getElementById("imgOverlayTitle").innerHTML = titleText;
+  document.getElementById("imgOverlayText").innerHTML = text;
+}
 
       </script>
 
