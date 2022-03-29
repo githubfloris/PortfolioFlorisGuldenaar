@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Montserrat+Subrayada&family=Teko:wght@300&display=swap');
+body {
+  /*display: flex;
+  justify-content: center;
+  align-items: center;*/
+  background: #000000;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  filter: brightness(80%);
+  transition-property: filter;
+  transition-duration: 1s;
+
+  transition-property: opacity;
+  transition-duration: 2s;
+}
+.nav-item{
+  font-size: 30pt;
+  line-height: 20pt;
+  font-family: 'Teko';
+  padding-top:15px;
+  text-shadow: 0px 0px 43px -9px rgba(0,0,0,0.95);
+}
+.nav-item .contact{
+  margin-left:200%;
+  transition: 1s;
+  user-select: none;
+  }
+
+.nav-item:hover{
+  text-shadow: #FFF 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, 2px 2px 2px rgba(205,206,51,0);
+  }
+
+
+.headertext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: #ffffff;
+  font-style: bold;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  
+  
+  transition: 0.6s;
+  }
+
+
+
+.headertext p {
+font-size: 30pt;
+line-height: 20pt;
+font-family: 'Teko';
+text-shadow: 0px 0px 20px rgba(0,0,0,0.46);
+}
+
+.headertextname {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  
+  color: #ffffff;
+  font-style: bold;
+  
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  
+  
+  
+  transition: 0.6s;
+  }
+  .headertextname h1 {
+    font-size: 75pt;
+    font-family: 'Josefin Sans', sans-serif;
+    transition: 0.9s;
+
+    color: #FFFFFF;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.16);
+    }
+
+
+/* ABOUT ME SECTION */
+.aboutme {
+  background-color: rgb(221, 215, 215);
+  border-right: 0px solid rgb(54, 17, 17);
+ /*  border-top-right-radius: 5vh;*/
+padding-top: 4vh;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;  
+  transition: 0.5s;
+  direction: rtl;
+
+  box-shadow: inset -15px 7px 7px -10px rgba(0,0,0,0.43);
+}
+.amContent .closebtn {
+  position: absolute;
+  top: 5px;
+  left: 20px;
+  font-size: 40px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.5s;
+}
+.amContent .closebtn:hover {
+  color: rgb(255, 255, 255);
+  left: 15px;
+  
+}
+
+
+.amContent {
+
+  direction: ltr;
+}
+
+
+/* ABOUT ME Text box */
+.amtext{
+  position: absolute;
+  top: 20vh;
+}
+.amtext a{
+  color: #ffffff;
+  background-color: #000000;
+  font-size: 5vh;
+  border: 1px solid #020203;
+  padding: 0.5vh 2vh 0.5vh 2vh;
+  cursor: pointer;
+  margin-left: -500vh;
+  font-family: 'Teko';
+  text-decoration:none;
+;
+}
+.amtext a:hover{
+  background-color: #353535;
+  text-decoration:underline;
+}
+.amtext p {
+  display: block;
+  position:sticky;
+  height: 100%;
+  overflow:visible;
+ margin-bottom: 2vh;
+
+  transition-property: margin-left;
+  transition-duration: 1s;
+}
+
+.con-icons{
+  margin-top: 3vh;
+}
+.con-icons .contact-icon{
+  width: 0%;
+  transition: 0.5s;
+  }
+  .contact-icon:hover{
+  opacity: 50%;
+  transform: rotate(360deg);
+  width: 2%;
+  }
+.aboutme p {
+  padding-left: 2vh;
+  padding-right: 2vh;
+  text-decoration: none;
+  color: #000;
+  display: block;
+width: 50vh;
+margin-left: -50vh;
+
+  height: fit-content;
+  line-height: 3.5vh;
+  font-size: 2.5vh;
+  text-align: center;
+  white-space:initial;
+}
+.aboutme h1 {
+  padding-left: 2vh;
+  font-weight: bold;
+  text-align:left;
+  word-spacing:1%;
+margin-bottom: 20%;
+  height: 1vh;
+  line-height: 10vh;
+  font-size: 11vh;
+  text-align: center;
+  white-space: nowrap;
+  margin-left: -50vh;
+
+  transition-property: margin-left;
+  transition-duration: 1s;
+  color: #1b1b1b;
+  font-family: 'Teko';
+}
+/* ABOUT ME CUSTOM SCROLLBAR STYLE */
+.aboutme::-webkit-scrollbar{
+  background-color: rgb(255, 255, 255);
+  width: 1vh;
+display: hide;
+}
+
+.aboutme::-webkit-scrollbar-track {
+  background: #ffffff; 
+  
+}
+ 
+.aboutme::-webkit-scrollbar-thumb {
+  background: rgb(87, 87, 87); 
+}
+.aboutme::-webkit-scrollbar-thumb:hover {
+  background: rgb(83, 83, 83); 
+}
+
+section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.block-about-container {
+  box-sizing:border-box;
+
+overflow: hidden;
+
+padding-top: 25vh;
+height: 100vh;
+  position: relative;
+  background: rgb(226, 226, 226);
+  
+  border-top: solid rgb(26, 26, 26,.10);;
+  border-width: 50px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  
+}
+.bg-block {
+  background: rgb(94, 28, 28);
+  color: white;
+  clip-path: polygon(82% 0, 100% 0, 100% 100%, 45% 100%);  padding: 100px;
+  padding: 220vh;
+right:0px;
+float: left;
+  top: 0;
+  position:absolute;
+  background-image: linear-gradient(45deg, #a00101, #301717);
+  z-index: 0;
+}
+
+.block-container {
+
+  padding-top: 20px;
+overflow: hidden;
+
+  position: relative;
+  background: rgb(48, 48, 48);
+  
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  
+}
+
+.projects-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.projects-divider-mini {
+  height: 0.5rem;
+  background-color: rgba(0, 0, 0, .1);
+  border: solid rgba(0, 0, 0, .15);
+  border-width: 1px 0;
+  box-shadow: inset 0 .5em .5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.block {
+  background: rgb(20, 20, 20);
+  transition: 0.5s;
+  
+}
+
+.block button{
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.block h2{
+  font-weight: bold;
+color: rgb(92, 19, 19);
+font-family: 'Teko';
+font-size: 5em;
+transition: 1s;
+
+}
+.block h1{
+  transition: 1s;
+
+}
+
+.block p{
+  position:relative;
+  transition: 1s;
+  overflow: visible;
+overflow-wrap:initial;
+width: 100%;
+}
+
+.block:hover {
+  background: rgb(75, 32, 32);
+  width: 105%;
+  height: auto;
+  transition: 1s ease-in-out;
+
+  
+}
+
+
+.block:hover h1{
+  margin-left: 4%;
+transition: 1s;
+}
+
+.block:hover p{
+  margin-left: 2%;
+transition: 1s;
+
+
+}
+
+
+.block:hover h2{
+  color: rgb(230, 2, 2);
+  width: 130%;
+  height: auto;
+
+}
+
+.block:active {
+  background: rgb(97, 27, 27);
+  height: 10%;
+  height: auto;
+transition: 0.2s;
+}
+.block:active h2{
+  color:rgb(20, 20, 20);
+}
+
+.project-overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.project-overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.project-overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.project-overlay .exitbutton a:hover, .overlay a:focus {
+  color: #f1f1f1;
+  transform: rotate(360deg);
+  transition: 1s;
+}
+
+.project-overlay .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 50px;
+  z-index: 2;
+}
+
+.project-info{
+  height: 100%;
+  text-align: center;
+  color: white;
+  text-align: left;
+  overflow: hidden;
+  background-color: #818181;
+  
+}
+.project-info p{
+  font-size: 1em;
+  color: #c42929;
+  margin-bottom: 30px;
+  }
+
+  .project-info .img-text p{
+    font-size: 1em;
+    line-height: 1em;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    font-family: 'Teko';
+    margin-top: 15px;
+  } 
+  .project-info .img-text h1{
+    font-size: 2em;
+    line-height: 0em;
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    font-family: 'Teko';
+  } 
+
+  .project-info .img-text{
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-left: 2%;
+    background-color: rgb(97, 27, 27);
+    height: 30%;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: 50%;
+    max-width: auto;
+
+
+    bottom:15%;
+    width: 40%;
+    position: absolute;
+  } 
+
+  .img-text::-webkit-scrollbar{
+    background-color: rgb(255, 255, 255);
+    width: 1vh;
+  display: hide;
+  }
+  
+  .img-text::-webkit-scrollbar-track {
+    background: #e2e2e2; 
+
+  }
+   
+  .img-text::-webkit-scrollbar-thumb {
+    background: rgb(53, 0, 0); 
+  }
+  .img-text::-webkit-scrollbar-thumb:hover {
+    background: rgb(83, 83, 83); 
+  }
+
+.project-info .image{
+position: absolute;
+  top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  max-height: 40px;
+  
+}
+.project-info .bottom {
+position: relative;
+  bottom: 8%;
+  font-family: 'Teko';
+ 
+  
+  position: absolute;
+}
+.project-info .bottom h1{
+  text-align: center;
+  color: rgb(63, 62, 62);
+  text-align: left;
+  display: inline;
+  font-weight: bold;
+  font-size: 1.2em;
+  
+}
+.project-info .bottom p{
+  text-align: center;
+  color: rgb(141, 40, 40);
+  text-align: left;
+  display: inline;
+  font-weight: bold;
+  font-size: 1.2em;
+  
+}
+.project-info .bottom h3{
+  text-align: center;
+  color: rgb(129, 129, 129);
+  text-align: left;
+  display: inline;
+  font-weight: bold;
+  font-size: 1.2em;
+  
+}
+.project-info .container{
+  background-color: rgb(20, 20, 20);
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  
+  
+  border-left: 50px solid rgb(77, 22, 22);
+  }
+
+
+
+  .imageCollage {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width:900px;
+    text-align: center;
+    padding: 1px;
+    background-color: #1a1a1a;
+    padding: relative;
+  }
+
+  .imageCollage img{
+    height: 245px;
+    flex-grow: 1;
+    object-fit: cover;
+    margin: 2px;
+    overflow: hidden;
+    transition: 1s;
+  }
+  .imageCollage .image-info p{
+    position: absolute;
+    margin-top: -140px;
+    margin-left: 70px;
+    color: #dddddd;
+    font-weight: bold;
+    opacity: 0%;
+    user-select: none;
+      }
+  .imageCollage .image-info{
+ transition: 1s;
+      }
+
+.imageCollage .image-info:hover{
+  opacity: 75%;
+    }
+.imageCollage .image-info:hover > p{
+  opacity: 100%;
+  transition: 1s;
+    }
+
+
+  .img-overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    transition: 0.5s;
+    overflow: hidden;
+
+    display: none;
+    opacity: 0%;
+  }
+  .img-overlay button{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    transition: 0.5s;
+    overflow: hidden;
+
+    background: transparent;
+  }
+  .img-overlay img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    height: auto;
+    max-height: 70%;
+    max-width: 70%;
+
+    margin-top: 15px;
+  }
+  .img-overlay .img-full-overlay-text{
+    margin-top: 50px;
+    text-align: center;
+    bottom: 10%;
+  }
+  .img-full-overlay-text p{
+    color: #e2e2e2;
+  }
+  .img-full-overlay-text h1{
+    color: #e2e2e2;
+    font-family: 'Teko';
+  }
+  
+
+/*
+@media screen and (max-height: 450px) and (max-width: 900px) {
+  .aboutme {padding-top: 15px;}
+  .aboutme p {font-size: 1vh;}
+  body {background-color: black;}
+}
+*/
+
+#main {
+  transition: margin-left .5s;
+}
+
+
+
+
+
